@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AppProvider } from "./state";
+import { Contact } from "./components/Stage1";
+import { TravelPreferences } from "./components/Stage2";
+import { Health } from "./components/Stage3";
+import { ConfirmData } from "./components/Submit";
+import { Success} from "./components/Success";
+ 
+export const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Contact />} />
+            <Route path="/travelpreferences" element={<TravelPreferences  />} />
+            <Route path="/health" element={<Health />} />
+            <Route path="/confirm" element={<ConfirmData />} />
+            <Route path="/success" element={<Success/>}/>
+          </Routes>
+        </Router>
+      </AppProvider>
     </div>
   );
-}
-
-export default App;
+};

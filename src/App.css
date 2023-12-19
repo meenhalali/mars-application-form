@@ -1,38 +1,65 @@
 .App {
   text-align: center;
+
+}
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  display: inline-block; /* centers form*/
+  background-color: rgb(139 92 246); /*rgb(139 92 246);*/
+  color:white;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 650px;
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  display: flex;
+  margin-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.error{
+  color: rgb(2, 0, 0);
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.section-row {
+  display: flex;
+  width: 100%;
+}
+.section-row div {
+  display: flex;
+  margin-bottom: 0.5rem;
+  margin-left: 5px;
+}
+.section-row div:first-child {
+  width: 50%;
+}
+.section-row div:last-child {
+  width: 50%;
+}
+button{
+  float: right;
+  color: rgb(18, 223, 93);
 }
