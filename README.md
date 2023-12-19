@@ -1,6 +1,6 @@
-## installation
+## Installation
 
-First run npm install in the project directory to get the node modules.
+First clone the repo then run npm install in the project directory to get the node modules.
 
 ## Available Scripts
 
